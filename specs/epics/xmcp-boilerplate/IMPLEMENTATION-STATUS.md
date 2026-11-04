@@ -4,7 +4,7 @@
 |---|---|---|
 | XM0 — the spec | ✅ | XM-1 |
 | XM1 — the MCP server on Workers | ✅ | XM-2 |
-| XM2 — a baseline | planned | XM-3 |
+| XM2 — a baseline | ✅ | XM-3, tagged `baseline-v1` |
 
 ## Departures from the upstream template
 
