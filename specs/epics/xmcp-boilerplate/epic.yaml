@@ -1,0 +1,30 @@
+# The epic's declaration. metadata.name equals the directory name; metadata.key
+# is the task-key prefix this epic reserves (XM → XM-1, XM-2, …). Owner, target
+# date and health are the platform's — never written here.
+apiVersion: orun.io/v1
+kind: Epic
+metadata:
+  name: xmcp-boilerplate
+  key: XM
+spec:
+  title: "Vercel's xmcp boilerplate on Cloudflare Workers"
+  summary: "Vercel's xmcp boilerplate — a Model Context Protocol server built with xmcp, its greet tool, review-code prompt and two resources each a file — is compiled by xmcp build --cf into one plain, stateless Cloudflare Worker serving Streamable HTTP at /mcp, inside the Cirrus baseline's repository conventions, and becomes an Orun baseline that takes a new MCP server from nothing to live on stage and prod in one landing."
+  state: started
+  milestones:
+    - name: "XM0 — the spec"
+      exitCriteria:
+        - "the repository is born with its intent, CI, tooling and spec index, and this doc set and the task contracts are on main"
+      tasks: [XM-1]
+    - name: "XM1 — the MCP server on Workers"
+      exitCriteria:
+        - "apps/api holds the template's tool, prompt and resources unchanged, built by xmcp build --cf (xmcp 1.9) into worker.js and served by a plain Worker whose /health names the server and its environment"
+        - "`pnpm typecheck`, `pnpm lint`, `pnpm test` and `pnpm build` are green, the tests calling the template's files and driving an MCP client against the built Worker in-process"
+        - "`wrangler dev` serves /mcp to the MCP SDK's own client: initialize with no session, the tool, the prompt and both resources"
+        - "the README says how to run, test, connect a client and deploy it, and how every Vercel piece maps to Cloudflare"
+      tasks: [XM-2]
+    - name: "XM2 — a baseline"
+      exitCriteria:
+        - "blueprint.yaml (the console card) and repo-blueprint.yaml (the build) take a new MCP server from nothing to live on stage and prod in one landing, then record it"
+        - "a server built from it carries the server only, renamed throughout to its own name, repository and Worker, with the template's licence intact"
+        - "Baseline CI is green: contract tests, generated component docs, the blueprint read by the pinned orun, the leak gate, the offline bootstrap and the end-to-end tier — the stage lane's steps in a staged job tree, the Worker smoke-tested and called by an MCP client"
+      tasks: [XM-3]
