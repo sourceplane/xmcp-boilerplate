@@ -7,6 +7,6 @@ folder is the adoption; the merge creates the epic in the workspace.
 
 | Epic | Cluster | Status | What it is |
 |------|---------|--------|------------|
-| [`xmcp-boilerplate/`](./xmcp-boilerplate/) | **XM** | In progress (XM1: the site on Workers) | Vercel's xmcp boilerplate — a tool, a prompt and two resources, each a file, over Streamable HTTP at `/mcp` — built by `xmcp build --cf` into one stateless Cloudflare Worker, and an Orun baseline that instantiates it in one landing (XM2) |
+| [`xmcp-boilerplate/`](./xmcp-boilerplate/) | **XM** | ✅ Shipped (`baseline-v1`); not yet live | Vercel's xmcp boilerplate — a tool, a prompt and two resources, each a file, over Streamable HTTP at `/mcp` — built by `xmcp build --cf` into one stateless Cloudflare Worker, and an Orun baseline that instantiates it in one landing (XM2) |
 
 As-built ≠ intent: what shipped lives in each epic's `IMPLEMENTATION-STATUS.md`.

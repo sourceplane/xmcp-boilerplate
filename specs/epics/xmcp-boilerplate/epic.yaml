@@ -9,7 +9,7 @@ metadata:
 spec:
   title: "Vercel's xmcp boilerplate on Cloudflare Workers"
   summary: "Vercel's xmcp boilerplate — a Model Context Protocol server built with xmcp, its greet tool, review-code prompt and two resources each a file — is compiled by xmcp build --cf into one plain, stateless Cloudflare Worker serving Streamable HTTP at /mcp, inside the Cirrus baseline's repository conventions, and becomes an Orun baseline that takes a new MCP server from nothing to live on stage and prod in one landing."
-  state: started
+  state: completed
   milestones:
     - name: "XM0 — the spec"
       exitCriteria:
